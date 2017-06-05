@@ -2,7 +2,11 @@
 
 too simple and easy to read, use or rewrite
 
+put chromedirver.exe in your chrome directory,
+perhaps adding to PATH is needed
+
 ```
+pip install selenium bs4
 python xx.py 
 ```
 
