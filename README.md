@@ -1,6 +1,6 @@
 # VulnSpider_cloud
 
-too simple and easy to read, use or rewrite
+simple and easy to read, use or rewrite
 
 put chromedirver.exe in your chrome directory,
 perhaps adding to PATH is needed
