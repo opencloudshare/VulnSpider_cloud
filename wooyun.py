@@ -11,7 +11,7 @@ import time
 browser = webdriver.Chrome()
 url = 'http://wooyun.jozxing.cc/search?keywords=%E4%BA%91&&content_search_by=by_bugs&&search_by_html=False&&page={page}'
 dirpath = os.getcwd()
-filepath = os.join(dirpath,'wooyun_{page}.html')
+filepath = os.path.join(dirpath,'wooyun_{page}.html')
 
 for i in range(1,37):
     browser.get(url.format(page=i))
@@ -26,7 +26,7 @@ for i in range(1,37):
 
 browser.close()
 
-respath = os.join(dirpath,'res_wooyun')
+respath = os.path.join(dirpath,'res_wooyun')
 for i in range(1,37):
     soup = BeautifulSoup(open(filepath.format(page=i)),'lxml')
 

@@ -11,7 +11,7 @@ import time
 browser = webdriver.Chrome()
 url = 'https://www.vulbox.com/board/search/q/%E4%BA%91/page/{page}'
 dirpath = os.getcwd()
-filepath = os.join(dirpath,'vulbox_{page}.html')
+filepath = os.path.join(dirpath,'vulbox_{page}.html')
 
 for i in range(1,19):
     browser.get(url.format(page=i))
@@ -26,7 +26,7 @@ for i in range(1,19):
 
 browser.close()
 
-respath = os.join(dirpath,'res_vulbox')
+respath = os.path.join(dirpath,'res_vulbox')
 for i in range(1,19):
     soup = BeautifulSoup(open(filepath.format(page=i)),'lxml')
 

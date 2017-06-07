@@ -11,7 +11,7 @@ import time
 browser = webdriver.Chrome()
 url = 'http://loudong.360.cn/Loo/index/search/%E4%BA%91/p/{page}.html'
 dirpath = os.getcwd()
-filepath = os.join(dirpath,'butian_{page}.html')
+filepath = os.path.join(dirpath,'butian_{page}.html')
 
 for i in range(1,73):
     browser.get(url.format(page=i))
@@ -26,7 +26,7 @@ for i in range(1,73):
 
 browser.close()
 
-respath = os.join(dirpath,'res_butian')
+respath = os.path.join(dirpath,'res_butian')
 for i in range(1,73):
     soup = BeautifulSoup(open(filepath.format(page=i)),'lxml')
 
